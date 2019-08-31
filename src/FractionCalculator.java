@@ -7,10 +7,10 @@ public class FractionCalculator {
         intro();
 
         while (true) {
-            mathOperation = getOperation(input);
-            Fraction num1 = getFraction(input);
-            Fraction num2 = getFraction(input);
-            Fraction result = new Fraction();
+            mathOperation = getOperation(input); //getting operation
+            Fraction num1 = getFraction(input); // getting first fraction
+            Fraction num2 = getFraction(input);// getting second fraction
+            Fraction result = new Fraction(); // to store final result
 
             if (mathOperation.equals("+")) {
                 result = num1.add(num2);
@@ -26,7 +26,7 @@ public class FractionCalculator {
                 System.out.println(num1+" = "+num2+" is "+num1.equals(num2));
             }
             else {
-                result.toLowestTerms();
+                result.toLowestTerms(); // making the simplest form of the fraction
                 System.out.println(num1 + " " + mathOperation + " " + num2 + " = " + result+"\n------------------------------------------");
             }
         }
