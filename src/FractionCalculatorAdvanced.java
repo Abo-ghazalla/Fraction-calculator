@@ -60,7 +60,7 @@ public class FractionCalculatorAdvanced {
                 System.exit(0);
             }
 
-            // split the user's input int parts to check an make the operation
+            // splitting the user's input into parts to check and make the operation
             String[] equParts = equation.split(" ");
             // be sure that user entered a three-part equation with a space between every two parts (fracOne operation fracTwo)
             if (equParts.length != 3) {
@@ -91,8 +91,9 @@ public class FractionCalculatorAdvanced {
                     continue;
                 }
             }
-            // if the first number is a fraction
+            // if the first number is a normal fraction (a/b)
             else {
+                // splitting the first fraction into parts to check and make the operation
                 String[] fractionOneParts = equParts[0].split("/");
 
                 // try and catch blocks to avoid errors if the use enters an invalid fraction
@@ -124,6 +125,7 @@ public class FractionCalculatorAdvanced {
             }
             // if the second number is a fraction
             else {
+                 // splitting the seconed fraction into parts to check and make the operation
                 String[] fractionTwoParts = equParts[2].split("/");
 
                 // try and catch blocks to avoid errors if the use enters an invalid fraction
@@ -137,6 +139,7 @@ public class FractionCalculatorAdvanced {
                     continue;
                 }
             }
+            // if there is no error and to get out of the while loop
             break;
         }
     }
